@@ -324,7 +324,9 @@ var stabilizers_colored = COLOR(fuselageColor)(stabilizers_placed);
 
 var aircraftModel = STRUCT([aircraft,wingL_colored,wingR_colored,stabilizers_colored]);
 
-DRAW(aircraftModel);
+var aircraftModel_t = T([1])([40])( T([2])([-45])(aircraftModel) );
+var aircraftModel_r = R([1,2])([PI/6])(aircraftModel_t);
+DRAW(aircraftModel_r);
 
 //PISTA
 var domainTre = DOMAIN([[0,1],[0,1],[0,1]])([15,15,15]);
