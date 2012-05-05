@@ -1,4 +1,4 @@
-//Valerio Domenico Di Paolo - matr. 261921 - exercise 4
+//Valerio Domenico Di Paolo - matr. 261921 - exercise 5
 
 // Il modello del Miles Magister è costruito in due metà sull'asse delle z mediante due pezzi speculari,
 //viene prima modellato un lato dalla fusoliera alla coda e successivamente viene generato il modello speculare
@@ -193,8 +193,6 @@ var aircraft = STRUCT([aircraft_side1, aircraft_side2, windscreen]);
 
 
 
-
-
 //ALA SINISTRA
 //punti di controllo per modellare l'ala
 //controllo attacco
@@ -255,11 +253,6 @@ var wingFR = BEZIER(S1)([c_1R,c_2R,c0R,c1R,c2R,c3R,c3R,c4R,c4R,c5R]);
 var wingR = MAP(wingFR)(domain2);
 var wingR_r = R([0,2])(-PI/2)(wingR);
 var wingR_placed = T([0])([2.8])( T([2])([pos_ali])(wingR_r) );
-
-
-
-
-
 
 
 
@@ -346,11 +339,3 @@ var s56 = BEZIER(S1)([c5,c6]);
 var pista = MAP(BEZIER(S2)([s34,s56]))(domainTre);
 DRAW(pista);
 
-//Elementi per il controllo del modello
-//var poligonoPunti = STRUCT([POLYLINE(p0_a), POLYLINE(p0_b),POLYLINE(p1),
-//					POLYLINE(p2), POLYLINE(p2_a),POLYLINE(p2_b),POLYLINE(p2_c),
-//					POLYLINE(p3),POLYLINE(p3_a),POLYLINE(p3_b),POLYLINE(p3_c),
-//					POLYLINE(p4),POLYLINE(p5),POLYLINE(p6),POLYLINE(p7),POLYLINE(p8)]);
-//var curves = STRUCT( CONS(AA(MAP)([c0_a,c0_b,c1,c2,c3,c4,c5,c6,c7,c8])) (domain1) );
-//DRAW(poligonoPunti);
-//DRAW(curves);
