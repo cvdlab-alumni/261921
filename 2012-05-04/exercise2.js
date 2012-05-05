@@ -189,14 +189,3 @@ var aircraft_side2 = STRUCT([engineBlocKL_colored,fuselageL_colored]);
 
 var aircraft = STRUCT([aircraft_side1, aircraft_side2,windscreen]);
 DRAW(aircraft);
-
-
-
-//Elementi per il controllo del modello
-//var poligonoPunti = STRUCT([POLYLINE(p0_a), POLYLINE(p0_b),POLYLINE(p1),
-//					POLYLINE(p2), POLYLINE(p2_a),POLYLINE(p2_b),POLYLINE(p2_c),
-//					POLYLINE(p3),POLYLINE(p3_a),POLYLINE(p3_b),POLYLINE(p3_c),
-//					POLYLINE(p4),POLYLINE(p5),POLYLINE(p6),POLYLINE(p7),POLYLINE(p8)]);
-//var curves = STRUCT( CONS(AA(MAP)([c0_a,c0_b,c1,c2,c3,c4,c5,c6,c7,c8])) (domain1) );
-//DRAW(poligonoPunti);
-//DRAW(curves);
